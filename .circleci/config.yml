@@ -54,8 +54,3 @@ jobs:
       - store_artifacts:
           path: test-reports
           destination: test-reports
-deployment:
-  staging:
-    branch: master
-    heroku:
-      appname: zuzhi-flaskr
