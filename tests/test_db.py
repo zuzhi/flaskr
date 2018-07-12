@@ -14,6 +14,7 @@ def test_get_close_db(app):
 
     assert 'closed' in str(e)
 
+
 def test_init_db_command(runner, monkeypatch):
     class Recorder(object):
         called = False
@@ -25,9 +26,6 @@ def test_init_db_command(runner, monkeypatch):
     result = runner.invoke(args=['init-db'])
     assert 'Initialized' in result.output
     assert Recorder.called
-
-import pytest
-from flaskr.db import get_db
 
 
 def test_index(client, auth):
